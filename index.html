@@ -1,2 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Belmicro - Certificações & Portfólio</title>
+    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-teste
+    <!-- Cabeçalho -->
+    <header class="bg-blue-900 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold">Painel Belmicro Tecnologia</h1>
+                <p class="text-sm text-blue-200 mt-1">Gestão de Certificações, Normas e Portfólio Técnico</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <span class="bg-blue-800 text-blue-100 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">Ambiente de Engenharia</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegação por Abas -->
+    <nav class="max-w-7xl mx-auto px-4 mt-6">
+        <div class="flex border-b border-gray-300">
+            <button onclick="switchTab('certificacoes')" id="btn-certificacoes" class="py-3 px-6 font-medium text-blue-600 border-b-2 border-blue-600 focus:outline-none transition-colors">
+                Certificações & Regulatório
+            </button>
+            <button onclick="switchTab('portfolio')" id="btn-portfolio" class="py-3 px-6 font-medium text-gray-500 hover:text-blue-600 border-b-2 border-transparent focus:outline-none transition-colors">
+                Documentação do Portfólio
+            </button>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+
+        <!-- ABA 1: CERTIFICAÇÕES -->
+        <section id="tab-certificacoes" class="tab-content space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Homologações e Conformidade Regulatória</h2>
+                <p class="text-gray-600 mb-6">Acompanhamento de processos junto a Inmetro, Anatel, ABNT e diretrizes ISO.</p>
+                
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Órgão / Norma</th>
+                                <th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Escopo / Categoria</th>
+                                <th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Status / Período</th>
+                                <th class="px-6 py-3 text-left font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-gray-900">Inmetro (Portarias 148 & 304)</td>
+                                <td class="px-6 py-4 text-gray-600">Eletrodomésticos e Informática (Frigobares, Cooktops, Ar-condicionados)</td>
+                                <td class="px-6 py-4"><span class="px-2.5 py-0.5 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Ativo (2024-2026)</span></td>
+                                <td class="px-6 py-4 text-blue-600 hover:underline cursor-pointer">Ver Dossiê</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-gray-900">Inmetro (Portarias 332 & 377)</td>
+                                <td class="px-6 py-4 text-gray-600">Refrigeradores, Adegas e Televisores LED/QLED</td>
+                                <td class="px-6 py-4"><span class="px-2.5 py-0.5 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Conforme</span></td>
+                                <td class="px-6 py-4 text-blue-600 hover:underline cursor-pointer">Ver Dossiê</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-gray-900">Anatel</td>
+                                <td class="px-6 py-4 text-gray-600">Módulos Wi-Fi/BT, Smart TVs 2K/4K e Tablets (T616, T70A, T80B)</td>
+                                <td class="px-6 py-4"><span class="px-2.5 py-0.5 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">Homologado</span></td>
+                                <td class="px-6 py-4 text-blue-600 hover:underline cursor-pointer">Ver Certificados</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-medium text-gray-900">ABNT / ISO (9001 & 14001)</td>
+                                <td class="px-6 py-4 text-gray-600">Rótulo Ecológico, Gestão da Qualidadade, Ambiental e CTF/APP</td>
+                                <td class="px-6 py-4"><span class="px-2.5 py-0.5 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Vigente</span></td>
+                                <td class="px-6 py-4 text-blue-600 hover:underline cursor-pointer">Ver Escopo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 2: DOCUMENTAÇÃO DO PORTFÓLIO -->
+        <section id="tab-portfolio" class="tab-content hidden space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Manuais, Fichas Técnicas e Vistas Explodidas</h2>
+                <p class="text-gray-600 mb-6">Documentação de engenharia estruturada por linhas de produtos.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-900 mb-2">Lava-louças</h3>
+                        <p class="text-sm text-gray-600 mb-4">Modelos de 6, 8, 10 e 14 serviços (HQ-LL10SD, HQ-LL14SD, HQ-LL6, HQ-LL8).</p>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:underline">Acessar Arquivos &rarr;</a>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-900 mb-2">Adegas & Cervejeiras</h3>
+                        <p class="text-sm text-gray-600 mb-4">Linhas HQ-AV (12 a 24 garrafas) e Cervejeiras Comerciais/Residenciais.</p>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:underline">Acessar Arquivos &rarr;</a>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-900 mb-2">Máquinas de Gelo</h3>
+                        <p class="text-sm text-gray-600 mb-4">Linhas Hicon, HQ-MGI45 e HQ-MG12KGDP com vistas explodidas.</p>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:underline">Acessar Arquivos &rarr;</a>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-900 mb-2">Ar-Condicionados Portáteis</h3>
+                        <p class="text-sm text-gray-600 mb-4">Unidades de 8.500 e 10.500 BTUs (HQ-AP10500FW, HQ-AP8500FW).</p>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:underline">Acessar Arquivos &rarr;</a>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-900 mb-2">Panelas de Pressão Elétricas</h3>
+                        <p class="text-sm text-gray-600 mb-4">Variantes analógicas e digitais de 5 e 6 litros (HQ-Y5M, HQ-Y6D).</p>
+                        <a href="#" class="text-sm font-semibold text-blue-600 hover:underline">Acessar Arquivos &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500 border-t border-gray-200 mt-12">
+        Belmicro Tecnologia S/A &copy; 2026 — Gestão de Qualidade e Engenharia de Produto
+    </footer>
+
+    <!-- Script para alternar as abas -->
+    <script>
+        function switchTab(tabId) {
+            // Ocultar todas as abas
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            
+            // Remover estilos ativos dos botões
+            document.getElementById('btn-certificacoes').className = "py-3 px-6 font-medium text-gray-500 hover:text-blue-600 border-b-2 border-transparent focus:outline-none transition-colors";
+            document.getElementById('btn-portfolio').className = "py-3 px-6 font-medium text-gray-500 hover:text-blue-600 border-b-2 border-transparent focus:outline-none transition-colors";
+
+            // Mostrar a aba selecionada e ativar o botão correspondente
+            if (tabId === 'certificacoes') {
+                document.getElementById('tab-certificacoes').classList.remove('hidden');
+                document.getElementById('btn-certificacoes').className = "py-3 px-6 font-medium text-blue-600 border-b-2 border-blue-600 focus:outline-none transition-colors";
+            } else if (tabId === 'portfolio') {
+                document.getElementById('tab-portfolio').classList.remove('hidden');
+                document.getElementById('btn-portfolio').className = "py-3 px-6 font-medium text-blue-600 border-b-2 border-blue-600 focus:outline-none transition-colors";
+            }
+        }
+    </script>
+</body>
+</html>
